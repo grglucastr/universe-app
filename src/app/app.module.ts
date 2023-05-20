@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { TitleComponent } from './components/title/title.component';
 import { UniverseComponent } from './pages/universe/universe.component';
 import { FilterComponent } from './components/filter/filter.component';
+import { PlanetFormComponent } from './pages/planet-form/planet-form.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FilterComponent } from './components/filter/filter.component';
     TitleComponent,
     UniverseComponent,
     FilterComponent,
+    PlanetFormComponent,
   ],
   imports: [
     BrowserModule,
