@@ -29,4 +29,9 @@ export class PlanetService {
     const url = `${this.API}/${id}`;
     return this.http.delete<Planet>(url);
   }
+
+  edit(planet: Planet): Observable<Planet>{
+    const url = `${this.API}/${planet.id}`
+    return this.http.put<Planet>(url, planet);
+  }
 }
