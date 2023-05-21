@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', component: UniverseComponent, pathMatch:'full' },
+  { path: '', redirectTo: 'universe', pathMatch:'full' },
+  { path: 'universe', component: UniverseComponent },
   { path: 'planet-form', component: PlanetFormComponent },
   
 ];
