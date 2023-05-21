@@ -36,6 +36,8 @@ export class PlanetComponent implements OnInit{
   }
 
   editPlanet(){
-    
+    const id = this.route.snapshot.paramMap.get('id');
+    const editForm = `/planets-edit/${id}`;
+    this.router.navigate([editForm]);
   }
 }
