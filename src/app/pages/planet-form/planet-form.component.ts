@@ -21,7 +21,7 @@ export class PlanetFormComponent {
 
   save(){
     this.service.post(this.planet).subscribe(() => {
-      this.router.navigate(['/universe']);
+      this.router.navigate(['/universe'])
     });
   }
 

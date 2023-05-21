@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MatCardModule } from '@angular/material/card'; 
 
 import { AppComponent } from './app.component';
 import { TitleComponent } from './components/title/title.component';
@@ -32,6 +33,7 @@ import { PlanetFormComponent } from './pages/planet-form/planet-form.component';
     MatGridListModule,
     MatInputModule,
     MatButtonModule,
+    MatCardModule,
     FormsModule,
     HttpClientModule
   ],

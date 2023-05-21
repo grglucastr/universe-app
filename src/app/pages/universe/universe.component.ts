@@ -1,10 +1,22 @@
-import { Component } from '@angular/core';
+import { Planet } from 'src/app/models/planet';
+import { PlanetService } from './../../services/planet/planet.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-universe',
   templateUrl: './universe.component.html',
   styleUrls: ['./universe.component.css']
 })
-export class UniverseComponent {
+export class UniverseComponent implements OnInit {
+
+  planets: Planet[] = [];
+
+  constructor(private planetService: PlanetService){}
+  
+  ngOnInit(): void {
+    this.planetService.listAll().subscribe((planets) => {
+      this.planets = planets;
+    });
+  }
 
 }
