@@ -15,9 +15,7 @@ export class PlanetComponent implements OnInit{
     name: ''
   }
 
-  constructor(private service: PlanetService, private router:Router, private route:ActivatedRoute){
-
-  }
+  constructor(private service: PlanetService, private router:Router, private route:ActivatedRoute){}
   
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
@@ -26,8 +24,18 @@ export class PlanetComponent implements OnInit{
     });
   }
 
-
   returnToHome(){
     this.router.navigate(['/universe']);
+  }
+
+  deletePlanet(){
+    const id = this.route.snapshot.paramMap.get('id');
+    this.service.delete(parseInt(id!)).subscribe(() => {
+      this.router.navigate(['/universe']);
+    })
+  }
+
+  editPlanet(){
+    
   }
 }

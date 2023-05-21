@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card'; 
+import {MatIconModule} from '@angular/material/icon'; 
 
 import { AppComponent } from './app.component';
 import { TitleComponent } from './components/title/title.component';
@@ -37,7 +38,8 @@ import { PlanetComponent } from './pages/planet/planet.component';
     MatButtonModule,
     MatCardModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

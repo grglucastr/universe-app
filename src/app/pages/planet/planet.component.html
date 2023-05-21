@@ -1,6 +1,15 @@
 <app-title text="Planet Details"></app-title>
 
+
 <div class="page-content">
+  <div>
+    <button
+        mat-button
+        type="button"
+        color="warn"
+        (click)="deletePlanet()" 
+        class="btn-cancel">Delete</button>
+  </div>
   <div class="single-info">
     <strong>Planet Name</strong>
     <span>{{ planet.name }}</span>
@@ -12,19 +21,22 @@
   </div>
   
   
-  <div>
+  <div class="single-info">
     <button 
       mat-stroked-button
       type="button"
       color="secondary" 
       (click)="returnToHome()"
       class="btn-cancel">Cancel</button>
+
+    <button 
+      mat-flat-button
+      type="button"
+      color="primary" 
+      (click)="editPlanet()"
+      class="btn-cancel">Edit</button>
       
-      <button 
-        mat-flat-button
-        type="button"
-        color="warn" 
-        class="btn-cancel">Delete</button>
+      
   </div>
   
 </div>
