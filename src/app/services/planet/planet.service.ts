@@ -19,4 +19,9 @@ export class PlanetService {
   listAll(): Observable<Planet[]> {
     return this.http.get<Planet[]>(this.API);
   }
+
+  findById(id: number): Observable<Planet> {
+    const url = `${this.API}/${id}`
+    return this.http.get<Planet>(url);
+  }
 }

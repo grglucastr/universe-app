@@ -1,1 +1,30 @@
-<p>planet works!</p>
+<app-title text="Planet Details"></app-title>
+
+<div class="page-content">
+  <div class="single-info">
+    <strong>Planet Name</strong>
+    <span>{{ planet.name }}</span>
+  </div>
+  
+  <div class="single-info">
+    <strong>Planet Mass</strong>
+    <span>{{ planet.mass }}</span>
+  </div>
+  
+  
+  <div>
+    <button 
+      mat-stroked-button
+      type="button"
+      color="secondary" 
+      (click)="returnToHome()"
+      class="btn-cancel">Cancel</button>
+      
+      <button 
+        mat-flat-button
+        type="button"
+        color="warn" 
+        class="btn-cancel">Delete</button>
+  </div>
+  
+</div>

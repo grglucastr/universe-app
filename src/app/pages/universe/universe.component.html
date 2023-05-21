@@ -1,8 +1,8 @@
 <app-title text="Universe"></app-title>
 <app-filter></app-filter>
 
-<div >
-  <mat-card *ngFor="let planet of planets" class="celestial-card">
+<div *ngFor="let planet of planets">
+  <mat-card (click)="goToDetails(planet.id!)"  class="celestial-card">
     <mat-card-title>{{planet.name}}</mat-card-title>
     <mat-card-subtitle>{{planet.mass}}</mat-card-subtitle>    
   </mat-card>  
