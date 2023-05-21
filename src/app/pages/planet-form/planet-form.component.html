@@ -1,1 +1,44 @@
 <app-title text="Planet Information"></app-title>
+
+<div class="padding-10">
+  <form class="planet-form">
+    
+    <div>
+      <mat-form-field class="planet-full-width">
+        <mat-label>Planet Name</mat-label>
+        <input 
+          matInput
+          name="name"
+          id="name"
+          [(ngModel)]="planet.name">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="planet-full-width">
+        <mat-label>Mass</mat-label>
+        <input 
+          matInput
+          name="mass"
+          id="mass"
+          [(ngModel)]="planet.mass">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <button 
+        mat-stroked-button
+        type="button"
+        color="secondary" 
+        (click)="returnToHome()"
+        class="btn-cancel">Cancel</button>
+
+      <button 
+        mat-flat-button
+        type="button" 
+        color="primary"
+        (click)="save()"
+        class="btn-save">Save</button>
+    </div>
+  </form>
+</div>
