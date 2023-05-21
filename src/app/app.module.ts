@@ -15,6 +15,7 @@ import { TitleComponent } from './components/title/title.component';
 import { UniverseComponent } from './pages/universe/universe.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { PlanetFormComponent } from './pages/planet-form/planet-form.component';
+import { PlanetComponent } from './pages/planet/planet.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { PlanetFormComponent } from './pages/planet-form/planet-form.component';
     UniverseComponent,
     FilterComponent,
     PlanetFormComponent,
+    PlanetComponent,
   ],
   imports: [
     BrowserModule,
