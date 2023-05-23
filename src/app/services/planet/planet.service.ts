@@ -3,16 +3,18 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Planet } from 'src/app/models/planet';
 
+import { environment } from 'src/environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
 export class PlanetService {
 
-  private readonly API = 'http://localhost:8080/api/v1/planets';
+  private readonly API = `${environment.apiUrl}/planets`;
 
   constructor(private http: HttpClient) { }
 
-  post(planet: Planet): Observable<Planet>{
+  post(planet: Planet): Observable<Planet>{    
     return this.http.post<Planet>(this.API, planet);
   }
 
@@ -33,5 +35,5 @@ export class PlanetService {
   edit(planet: Planet): Observable<Planet>{
     const url = `${this.API}/${planet.id}`
     return this.http.put<Planet>(url, planet);
-  }
+  }  
 }
