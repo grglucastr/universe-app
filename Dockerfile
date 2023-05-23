@@ -1,15 +1,17 @@
 FROM node:slim 
 
-RUN npm install -g http-server -y
+RUN npm install -g angular-http-server -y
 RUN npm install -g @angular/cli -y
 
-COPY . /usr/src/planets-app
+COPY . /usr/src/universe-app
 
-WORKDIR /usr/src/planets-app
+WORKDIR /usr/src/universe-app
 
 RUN ng build --configuration production
 
-EXPOSE 8889
+WORKDIR /usr/src/universe-app/dist/universe-app
 
-CMD [ "http-server", "./dist/universe-app/", "-p 8889" ]
+EXPOSE 8889
+ 
+CMD ["angular-http-server", "-p 8889"]
 
