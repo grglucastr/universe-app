@@ -18,6 +18,7 @@ import { FilterComponent } from './components/filter/filter.component';
 import { PlanetFormComponent } from './pages/planet-form/planet-form.component';
 import { PlanetComponent } from './pages/planet/planet.component';
 import { PlanetEditFormComponent } from './pages/planet-edit-form/planet-edit-form.component';
+import { RegisterButtonComponent } from './components/register-button/register-button.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { PlanetEditFormComponent } from './pages/planet-edit-form/planet-edit-fo
     PlanetFormComponent,
     PlanetComponent,
     PlanetEditFormComponent,
+    RegisterButtonComponent,
   ],
   imports: [
     BrowserModule,
