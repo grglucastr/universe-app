@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -8,9 +8,16 @@ import { Component } from '@angular/core';
 })
 export class FilterComponent {
   
+  @Output() 
+  onSearch = new EventEmitter<string>();
+
+  searchInput: string = '';
+
   constructor(private router: Router){}
   
-  redirectToPlanetForm():void {
-    this.router.navigate(['/planet-form'])
+  onTextChange(){
+    this.onSearch.emit(this.searchInput);
   }
+
+  
 }

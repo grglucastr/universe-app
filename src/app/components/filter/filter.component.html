@@ -1,14 +1,4 @@
-<form class="filter-form">
-  <mat-form-field class="filter-large-width">
-    <mat-label>Serach for celestial here...</mat-label>
-    <input matInput placeholder="Ex. Moon">
-  </mat-form-field>
-  <button 
-      mat-flat-button 
-      type="button" 
-      color="primary" 
-      class="btn-register"
-      (click)="redirectToPlanetForm()">
-      Register
-  </button>
-</form>
+<mat-form-field class="filter-large-width">
+  <mat-label>Serach for celestial here...</mat-label>
+  <input matInput placeholder="Ex. Moon" [(ngModel)]="searchInput" (keyup)="onTextChange()">
+</mat-form-field>
